@@ -1,11 +1,8 @@
 #include <iostream>
-#include <test.h>
 using namespace std;
-
-void func();
+extern inline void func();
 int main()
 {
 	func();
-
 	return 0;
 }
