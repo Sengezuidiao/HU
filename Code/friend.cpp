@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+class Building;
+class MyFriend;
+
+
 
 
 
@@ -9,7 +13,8 @@ class Building
 {
 	friend void MyFriend::LookAtBedRoom(Building& building);
 
-}
+};
+
 class MyFriend
 {
 public:
@@ -17,10 +22,7 @@ public:
 	void PlayInBedRoom(Building& building);
 
 
-}
-
-
-
+};
 
 
 
