@@ -86,3 +86,43 @@ result：
 #### 3
 
 <img src="work.assets/image-20230510161533620.png" alt="image-20230510161533620" style="zoom:25%;" />
+
+think:
+
+code:
+
+```c
+#include <stdio.h>
+int main()
+{
+	int matrix[3][3];
+	printf("please input a 3 x 3 matrix\n");
+    //输入3X3矩阵
+	for(int i=0; i<3; i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			scanf("%d", &matrix[i][j]);
+		}
+	}
+	int sum = 0;
+    //判断i=j，并求和
+	for(int i=0; i<3; i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			if(i==j)
+			{
+				sum += matrix[i][j];
+			}
+		}
+	}
+	printf("the sum of 3 x 3 matri = %d\n", sum);
+	return 0;
+}
+
+```
+
+result:
+
+![image-20230510234105566](work.assets/image-20230510234105566.png)
