@@ -89,6 +89,12 @@ result：
 
 think:
 
+```
+主对角元素就是行列坐标相等的元素
+```
+
+
+
 code:
 
 ```c
@@ -126,3 +132,6 @@ int main()
 result:
 
 ![image-20230510234105566](work.assets/image-20230510234105566.png)
+
+#### 4
+
