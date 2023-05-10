@@ -55,6 +55,7 @@ result：
 think:
 
 ```
+输入一个小写字母，说明还得判断是不是小写字母
 1、使用ASCII码转换,小写---（-32）---大写 
 2、使用库函数
 3、使用位运算
@@ -63,5 +64,25 @@ think:
 code
 
 ```c
+#include  <stdio.h>
+int main()
+{
+	char a;
+	printf("input a-z\n");
+	scanf("%c", &a);
+	if(a>='a' && a<='z')
+		a-=32;
+	else
+		printf("input error!\n");
+	printf("output:%c\n", a);
+	return 0;
+}
 ```
 
+result：
+
+<img src="work.assets/image-20230510161317371.png" alt="image-20230510161317371" style="zoom:25%;" />
+
+#### 3
+
+<img src="work.assets/image-20230510161533620.png" alt="image-20230510161533620" style="zoom:25%;" />
