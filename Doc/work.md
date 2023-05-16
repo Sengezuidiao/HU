@@ -135,3 +135,52 @@ result:
 
 #### 4
 
+![image-20230516112214588](work.assets/image-20230516112214588.png)
+
+think:
+
+```
+1、如何拆分百位数
+2、如何求立方
+3、将水仙花数输出
+```
+
+code:
+
+```c
+#include  <stdio.h>
+#include <math.h>
+int main()
+{
+	int digit = 0;
+	int tens = 0;
+	int hundreds = 0;
+	
+	for(int i = 100; i<= 999; i++ )
+	{
+	    digit = i%100%10;
+	    tens = i%100/10;
+	    hundreds = i/100;
+	  	if(i == pow(digit,3) + pow(tens, 3) + pow(hundreds,3))
+			printf("%d \n",i);
+
+	}
+	return 0;
+}
+```
+
+5、
+
+![image-20230516114725571](work.assets/image-20230516114725571.png)
+
+think:
+
+```
+if else if else
+```
+
+code:
+
+```c
+```
+
