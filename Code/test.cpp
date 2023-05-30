@@ -1,7 +1,15 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-inline void func()
+int main()
 {
-	cout<<"inline test"<<endl;
+	
+	string str = "asdfg";
+	char ch1 = str[100];
+	cout<< ch1<<endl;
+	char ch2 = str.at(100);
+	cout << ch2<<endl;
+	return 0;
 }
