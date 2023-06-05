@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <WinSock2.h>
-#pragma comment(lib, "ws2_32.lib")
+//#pragma comment(lib, "ws2_32.lib") gcc 这条没用
 
 int main()
 {
@@ -28,16 +28,21 @@ int main()
 	sockAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
 	sockAddr.sin_port = htons(1234);
 
-	iResult = bind(servSock, (SOCKADDR*)&sockAddr, sizeof(sockAddr));
+	iResult = bind(servSock, (SOCKADDR*)&sockAddr, sizeof(SOCKADDR));
 	if(iResult == SOCKET_ERROR)
 	{
 		printf("bind failed with error %u\n", WSAGetLastError());
 		return 1;
 	}
 	listen(servSock, 20);
-	char *str = "connect success!\n";
-	send(servSock, str, strlen(str), MSG_OOB);
-	
+	//acept client request
+	SOCKADDR clntAddr;
+	int nSize = sizeof(SOCKADDR);
+	SOCKET clntSock = accept(servSock, (SOCKADDR*)&clntAddr, &nSize);
+	const char *str = "\nconnect success!\n";
+	send(servSock, str, strlen(str)+1, NULL);
+	closesocket(clntSock);
+	closesocket(servSock);
 	WSACleanup();
 	return 0;
 }
