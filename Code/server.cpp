@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <WinSock2.h>
-//#pragma comment(lib, "ws2_32.lib") gcc 这条没用
+//#pragma comment(lib, "ws2_32.lib") gcc 这条没用 
 
 int main()
 {

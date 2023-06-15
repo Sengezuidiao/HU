@@ -7,7 +7,7 @@
 int main()
 {
 	int a[100];
-	printf("%d", sizeof(a)/sizeof(a[0]));
+	printf("%lld", sizeof(a)/sizeof(a[0]));
 	return 0;
 }
 
